@@ -1,0 +1,35 @@
+{
+  "name": "cn-employee-review-system",
+  "version": "1.0.0",
+  "description": "allows employees to submit feedback toward each other’s performance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtulKishor/CN-Employee-review-system.git"
+  },
+  "author": "Atul Kishor",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AtulKishor/CN-Employee-review-system/issues"
+  },
+  "homepage": "https://github.com/AtulKishor/CN-Employee-review-system#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}
