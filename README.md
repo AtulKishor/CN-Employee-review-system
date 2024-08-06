@@ -5,6 +5,8 @@
 ## Hosted link:
 
 https://cn-employee-review-system-43s6.onrender.com/
+Username: aakash@gmail.com
+Password (all): qwerty
 
 # ScreenShots:
   ## Login page:
