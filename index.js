@@ -6,7 +6,7 @@ import session from 'express-session';
 import expressLayouts from 'express-ejs-layouts';
 
 // flash messages package and middleware
-import flash from 'connect-flash';
+import flash from '@codecorn/connect-flash-new';
 import {setFlash} from './config/flash.middleware.js';
 
 // store the session in mongostore
@@ -54,7 +54,7 @@ app.use(session({
     },
     // store the session in database
     store: MongoStore.create({
-      mongoUrl:process.env.MONGODB_URL
+      mongoUrl: process.env.MONGODB_URL || "mongodb://0.0.0.0:27017/ersDB"
     })
   }));
   

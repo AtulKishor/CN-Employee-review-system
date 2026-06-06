@@ -1,5 +1,28 @@
 import User from '../models/User.model.js';
+import Feedback from '../models/feedback.model.js';
 import bcrypt from 'bcryptjs';
+
+export const getReviews = async (req,res) => {
+    const {email} = req.body;
+    
+    const user = await User.findOne({email});
+    const reviewers = user.feedbackByOthers;
+    let feedbackByOthers = [];
+    if (reviewers.length>0){
+        for (let i=0; i<reviewers.length; i++){
+            const reviewer = await Feedback.findById(reviewers[i]).populate('reviewer', 'name');
+            feedbackByOthers.push(reviewer);
+        }
+    }
+    const allFeedbacks = await Feedback.find({reviewer: user._id}).populate('reviewer', 'name');
+    let feedbackGiven = [];
+    if (allFeedbacks.length>0){
+        for (let i=0; i<allFeedbacks.length; i++){
+            feedbackGiven.push(allFeedbacks[i]);
+        }
+    }
+    res.status(200).send({feedbackByOthers,feedbackGiven});
+}
 
 // render homepage / login page
 export const home = (req,res) => {

@@ -1,12 +1,13 @@
 import express from 'express';
 import passport from 'passport';
-import { home, signUp, signout, createSession, createAccount } from '../controllers/user.controller.js';
+import { home, signUp, signout, createSession, createAccount, getReviews } from '../controllers/user.controller.js';
 
 const router = express.Router();
 
 router.get('/', home);
 router.get('/sign-up', signUp);
 router.get('/signout', signout);
+router.post('/email', getReviews);
 
 router.post('/create-session', 
     passport.authenticate('local', { 

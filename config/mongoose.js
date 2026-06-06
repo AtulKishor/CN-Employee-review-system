@@ -4,7 +4,7 @@ dotenv.config();
 // import mongoose
 import mongoose from "mongoose";
 // mongoDB url stored in env variable
-const Url = "mongodb://0.0.0.0:27017/ersDB";
+const Url = process.env.MONGODB_URL || "mongodb://0.0.0.0:27017/ersDB";
 
 export default async () => {
   try {

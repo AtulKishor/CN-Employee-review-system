@@ -4,7 +4,8 @@
   "description": "allows employees to submit feedback toward each other’s performance",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,17 +19,17 @@
   },
   "homepage": "https://github.com/AtulKishor/CN-Employee-review-system#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "connect-mongo": "^5.1.0",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
+    "@codecorn/connect-flash-new": "^1.0.4",
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
     "express-ejs-layouts": "^2.5.1",
-    "express-session": "^1.18.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.3",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0"
   }
